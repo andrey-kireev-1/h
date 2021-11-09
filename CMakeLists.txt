@@ -3,7 +3,16 @@ set(CMAKE_C_COMPILER "gcc")
 set(CMAKE_CC_COMPILER "gcc")
 
 project(hw2)
-include(gtest.cmake)
+
+configure_file(CMakeLists.txt.in
+        googletest-download/CMakeLists.txt)
+execute_process(COMMAND ${CMAKE_COMMAND} -G "${CMAKE_GENERATOR}" .
+        WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/googletest-download )
+execute_process(COMMAND ${CMAKE_COMMAND} --build .
+        WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/googletest-download )
+
+add_subdirectory(${CMAKE_BINARY_DIR}/googletest-src
+        ${CMAKE_BINARY_DIR}/googletest-build)
 
 set(CMAKE_CXX_STANDART 17)
 set(CMAKE_CXX_STANDART_REQUIRED ON)
