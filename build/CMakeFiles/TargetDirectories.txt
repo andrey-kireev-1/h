@@ -1,5 +1,0 @@
-/home/andrey/Документы/h/build/CMakeFiles/rebuild_cache.dir
-/home/andrey/Документы/h/build/CMakeFiles/tests.dir
-/home/andrey/Документы/h/build/CMakeFiles/edit_cache.dir
-/home/andrey/Документы/h/build/CMakeFiles/hw2.dir
-/home/andrey/Документы/h/build/CMakeFiles/gen.dir
