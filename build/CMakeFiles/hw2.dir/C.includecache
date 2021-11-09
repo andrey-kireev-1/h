@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/andrey/Документы/h/project/src/header.h
+stdio.h
+-
+stdlib.h
+-
+time.h
+-
+sys/wait.h
+-
+unistd.h
+-
+
+/home/andrey/Документы/h/project/src/main.c
+header.h
+/home/andrey/Документы/h/project/src/header.h
+sequential.c
+/home/andrey/Документы/h/project/src/sequential.c
+parallel.c
+/home/andrey/Документы/h/project/src/parallel.c
+
+/home/andrey/Документы/h/project/src/parallel.c
+header.h
+/home/andrey/Документы/h/project/src/header.h
+
+/home/andrey/Документы/h/project/src/sequential.c
+header.h
+/home/andrey/Документы/h/project/src/header.h
+

@@ -1,0 +1,23 @@
+language: c
+
+compiler:
+  - gcc
+
+
+addons:
+  apt:
+    packages:
+      - valgrind
+      - cppcheck
+      - make
+      - cmake
+      - lcov
+      - doxygen
+      - help2man
+
+script:
+  - apt-get install --yes libgtest-dev
+  - mkdir build
+  - cd build
+  - cmake ..
+  - make

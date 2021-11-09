@@ -1,0 +1,1 @@
+/usr/bin/gcc  -Wall -Werror -Wpedantic -g3 -ggdb   CMakeFiles/hw2.dir/project/src/main.c.o  -o hw2  libgen.a -lpthread 
