@@ -22,7 +22,7 @@ set(CMAKE_C_FLAGS " -Wall -Werror -Wpedantic -g3 -ggdb")
 
 # INCLUDE_DIRECTORIES(project/include)
 set(SOURCE_LIB project/src/main.c)	
-add_library(gen include(gtest.cmake)STATIC ${SOURCE_LIB})
+#add_library(gen include(gtest.cmake)STATIC ${SOURCE_LIB})
 add_executable(hw2 project/src/main.c)
 target_link_libraries(hw2 gen -lpthread)
 find_package(Threads)
