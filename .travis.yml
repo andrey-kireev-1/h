@@ -16,7 +16,6 @@ addons:
       - help2man
 
 script:
-  - apt-get install --yes libgtest-dev
   - mkdir build
   - cd build
   - cmake ..
