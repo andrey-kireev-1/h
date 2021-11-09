@@ -4,16 +4,6 @@ set(CMAKE_CC_COMPILER "gcc")
 
 project(hw2)
 
-configure_file(CMakeLists.txt.in
-        googletest-download/CMakeLists.txt)
-execute_process(COMMAND ${CMAKE_COMMAND} -G "${CMAKE_GENERATOR}" .
-        WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/googletest-download )
-execute_process(COMMAND ${CMAKE_COMMAND} --build .
-        WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/googletest-download )
-
-add_subdirectory(${CMAKE_BINARY_DIR}/googletest-src
-        ${CMAKE_BINARY_DIR}/googletest-build)
-
 set(CMAKE_CXX_STANDART 17)
 set(CMAKE_CXX_STANDART_REQUIRED ON)
 set(CMAKE_CXX_OUTPUT_EXTENSION_REPLACE ON)
@@ -38,9 +28,9 @@ target_link_libraries(hw2 gen -lpthread)
 
 #include_directories(${GTEST_INCLUDE_DIRS})
 #message(${GTEST_LIBRARIES})
-add_executable(tests project/tests/test.cpp)
+#add_executable(tests project/tests/test.cpp)
 
 #target_link_libraries(${PROJECT_NAME} gtest ${CMAKE_THREAD_LIBS_INIT})
 #target_link_libraries(tests ${GTEST_LIBRARIES} -lpthread)
-target_link_libraries(tests gen)
+#target_link_libraries(tests gen)
 
